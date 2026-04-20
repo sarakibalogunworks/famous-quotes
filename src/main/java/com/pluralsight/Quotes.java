@@ -20,13 +20,17 @@ public class Quotes {
 
 
         System.out.println("Gimme a number 1-10: ");
-        int num = scanner.nextInt();
 
-        if (num >= 1 && num <= 10) {
-            System.out.println(quotes[num - 1]);
-        } else {
-            System.out.println("wrong number buddy");
-        }
+        try {
+            int pick = scanner.nextInt();
+            scanner.nextLine();
+
+            if(pick < 1 || pick > 10) {
+                System.out.println("Out of bounds. Only 1-10 works.");
+            } else {
+                System.out.println(quotes[pick -1]);
+            }
+        } catch (Exception)
 
 
     }
