@@ -30,7 +30,10 @@ public class Quotes {
             } else {
                 System.out.println(quotes[pick -1]);
             }
-        } catch (Exception)
+        } catch (Exception e) {
+            System.out.println("Bad input. Ranging numbers from 1-10 only.");
+        }
+
 
 
     }
